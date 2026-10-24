@@ -13,7 +13,8 @@
 
 | 平台 | 文件 | 说明 |
 |---|---|---|
-| macOS 11+（Apple 芯片 + Intel） | `glass-<版本>-macos-universal.dmg` | 打开后把 Glass 拖进"应用程序"。已经过 Apple 公证，双击即可打开 |
+| macOS 11+（Apple 芯片：M1 / M2 / M3 / M4） | `glass-<版本>-macos-arm64.dmg` | 打开后把 Glass 拖进"应用程序"。已经过 Apple 公证，双击即可打开 |
+| macOS 11+（Intel） | `glass-<版本>-macos-x86_64.dmg` | 同上。不确定是哪种：屏幕左上角苹果菜单 → "关于本机"，"芯片"写着 Apple 的选上一个，"处理器"写着 Intel 的选这个 |
 | Windows 10 1809+ / 11（x64） | `glass-<版本>-windows-x64.zip` | 解压得到单个 `glass.exe`，直接运行，不用安装运行库。exe 没有代码签名，第一次运行时 SmartScreen 点"更多信息 → 仍要运行" |
 | Windows 11 ARM64 | `glass-<版本>-windows-arm64.zip` | 同上 |
 | Linux x86_64（glibc 2.35+，X11 / Wayland） | `glass-<版本>-linux-x86_64.tar.gz` | 解压后按包里的 `README.md` 装到 `~/.local`；需要 Vulkan 驱动（Mesa 或 NVIDIA） |
@@ -23,7 +24,7 @@
 ## 为什么用 Glass
 
 - **快**：Rust 编写，基于 Zed 编辑器的 GPUI 框架用 GPU 绘制，终端内核是 alacritty_terminal；大量输出、
-  快速滚动都很流畅，安装包只有几 MB。
+  快速滚动都很流畅，安装包只有两三 MB。
 - **粘贴很顺**：截图、浏览器里复制的图片、Finder / 资源管理器里复制的文件，在本机标签里直接用，在 ssh
   标签里自动传到远端再填入远端路径；前台是 Claude Code / Codex 时显示为 `[Image #1]` 附件。远端什么都
   不用装，走系统自带的 OpenSSH。
