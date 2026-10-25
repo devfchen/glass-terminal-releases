@@ -36,7 +36,7 @@
   Glass 菜单里点"免密"，自动生成或复用密钥、装到远端，并把这台电脑加进"远程"菜单，以后一点就连上。
 - **配色方案**：内置 Light、Dark（与 Windows Terminal 默认配色一致），可以新增自己的方案，颜色用取色板调；
   界面跟着方案变深变浅。
-- **好用的标签和窗口**：Windows / Linux 上标签直接放在标题栏里（像 Windows Terminal），标签跟着当前目录显示；新标签跟随当前连接，标签可以拖出成独立窗口、拖回合并；会话管理器管理
+- **好用的标签和窗口**：Windows / Linux 上标签直接放在标题栏里（像 Windows Terminal），标签跟着当前目录显示；新标签跟随当前连接，标签可以拖出成独立窗口、拖回合并；mac 上标签栏高度可调；会话管理器管理
   `~/.ssh/config` 里的主机；中文输入法（微软拼音、搜狗等）组字、选词就在光标处。
 
 ## 运行要求
@@ -62,7 +62,7 @@ Glass 构建在这些开源项目之上，按各自的许可证使用：
 
 | 组件 | 用途 | 许可证 |
 |---|---|---|
-| [GPUI](https://github.com/zed-industries/zed)（Zed Industries） | 界面框架、GPU 渲染 | Apache-2.0，**有修改**：Windows 输入法修复、拖出标签时移动窗口 |
+| [GPUI](https://github.com/zed-industries/zed)（Zed Industries） | 界面框架、GPU 渲染 | Apache-2.0，**有修改**：Windows 输入法修复、拖出标签时移动窗口、一行里换字体时的排版修复、mac 改窗口标题时鼠标指针不闪 |
 | [alacritty_terminal](https://github.com/alacritty/alacritty)（Alacritty） | 终端内核 | Apache-2.0，**有修改**：kitty 键盘模式栈满时不再崩溃（同上游修复） |
 | [vte](https://github.com/alacritty/vte) | 控制序列解析 | Apache-2.0 / MIT |
 | [ConPTY / OpenConsole](https://github.com/microsoft/terminal)（Microsoft，仅 Windows 版） | 伪终端 | MIT，未修改 |
