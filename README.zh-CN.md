@@ -5,7 +5,7 @@
 **为 SSH 和 AI 编程助手打造的终端。** 核心用 Rust 编写，界面由 GPU 直接绘制，启动快、刷屏和滚动顺滑、
 打字没有延迟；在本机或 ssh 远端的 Claude Code、Codex 里粘贴截图，直接变成输入框里的图片附件。
 
-支持 macOS、Windows、Linux，界面默认中文，也可以在设置里切换成英文。
+支持 macOS、Windows、Linux，界面默认英文，在设置里可以切换成中文（Settings ▸ General ▸ 中文）。
 
 > 源码目前未公开，后续会开源。这个仓库只用来发布安装包和收集反馈。
 

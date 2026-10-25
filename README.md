@@ -7,7 +7,7 @@ straight on the GPU: it starts fast, scrolls and streams output smoothly, and ty
 Paste a screenshot into Claude Code or Codex, locally or on an ssh host, and it lands in the prompt
 as an image attachment.
 
-Runs on macOS, Windows and Linux. The UI is in Chinese by default; switch it to English in Settings.
+Runs on macOS, Windows and Linux. The UI is in English by default; switch it to Chinese in Settings.
 
 > The source code is not public yet and will be open-sourced later. This repository only hosts the
 > installers and collects feedback.
