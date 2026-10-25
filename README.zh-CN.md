@@ -31,12 +31,17 @@
 
 ![几台主机上的 Claude Code、Codex 同时开在标签里](images/tabs.png)
 
+![远端标签一直在服务器上跑，睡眠、断网、重启 Glass 后都能接回来](images/remote-tabs.png)
+
 - **快**：Rust 编写，基于 Zed 编辑器的 GPUI 框架用 GPU 绘制，终端内核是 alacritty_terminal；大量输出、
   快速滚动都很流畅，安装包只有两三 MB。
 - **粘贴很顺**：截图、浏览器里复制的图片、Finder / 资源管理器里复制的文件，在本机标签里直接用，在 ssh
   标签里自动传到远端再填入远端路径；前台是 Claude Code / Codex 时显示为 `[Image #1]` 附件。远端什么都
   不用装，走系统自带的 OpenSSH。
 - **拖文件上传**：把文件拖进 ssh 标签，直接传到终端当前所在的目录，保留原文件名，并把远端路径填进命令行；重名自动改名不覆盖。
+- **断线不丢**：从"远端"菜单开的标签（带云图标）跑在主机上的 tmux 里，电脑睡眠、断网、退出 Glass 都不影响，
+  网络回来自动重连，屏幕和历史都在；"远端"菜单列出每台主机上的所有窗口，点一下就接回来。退出 Glass 再打开，
+  窗口、标签、目录和回滚内容都会恢复。
 - **文件面板**（⌘B / Alt+B）：侧栏浏览远端文件，拖进去上传、右键下载，跟着终端的 `cd` 走，有进度、能取消。
 - **为 AI 助手调好的键盘**：支持 kitty 键盘协议，Claude Code / Codex 里 Shift+Enter 换行、Enter 提交；
   ⌘ / Ctrl 点击打开链接，包括程序发出的跨行链接。
@@ -57,7 +62,7 @@
   私钥有口令时，把"OpenSSH Authentication Agent"服务设为自动并 `ssh-add` 一次。不要以管理员身份运行，
   否则收不到资源管理器拖来的文件。
 - **Linux**：glibc 2.35 以上（Ubuntu 22.04、Debian 12 及更新）、Vulkan 驱动、`ssh`。
-- **远端**：不装任何东西，有 POSIX `sh` 即可（Linux、macOS、BSD）；文件面板要远端开着 SFTP（OpenSSH 默认开）。
+- **远端**：不装任何东西，有 POSIX `sh` 即可（Linux、macOS、BSD）；文件面板要远端开着 SFTP（OpenSSH 默认开）；远端标签要主机上有 tmux 3.0 或更新。
 
 ## 反馈
 

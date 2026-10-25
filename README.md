@@ -34,6 +34,8 @@ Get the latest version from [Releases](https://github.com/devfchen/glass-termina
 
 ![Tabs running Claude Code and Codex on several hosts](images/tabs.png)
 
+![Remote tabs keep running on the server and come back after sleep, a dropped connection or a restart](images/remote-tabs.png)
+
 - **Fast**: written in Rust, drawn on the GPU with GPUI (the framework of the Zed editor), with
   alacritty_terminal as the terminal core. Heavy output and fast scrolling stay smooth, and the
   installers are only two or three MB.
@@ -44,6 +46,10 @@ Get the latest version from [Releases](https://github.com/devfchen/glass-termina
 - **Drop files to upload**: drag files into an ssh tab and they go to the terminal's current
   directory, keeping their names, and their remote paths are typed in at the prompt; a name already
   taken gets a new one instead of being overwritten.
+- **Sessions that survive**: tabs opened from the Remote menu (the cloud icon) run in tmux on the
+  host, so sleep, a dropped Wi-Fi or quitting Glass doesn't stop them; they reconnect on their own
+  with the screen and history intact. The Remote menu lists every window on every host, one click
+  brings it back. Quit and reopen Glass: windows, tabs, folders and scrollback come back.
 - **File panel** (⌘B / Alt+B): browse the remote files in a sidebar, drop files in to upload,
   right-click to download. It follows the terminal's `cd`, shows progress and can be cancelled.
 - **Keyboard tuned for AI agents**: kitty keyboard protocol, so Shift+Enter makes a new line and
@@ -76,7 +82,7 @@ Get the latest version from [Releases](https://github.com/devfchen/glass-termina
   files dragged from Explorer.
 - **Linux**: glibc 2.35 or later (Ubuntu 22.04, Debian 12 and newer), a Vulkan driver, `ssh`.
 - **Remote hosts**: nothing to install, a POSIX `sh` is enough (Linux, macOS, BSD); the file panel
-  needs SFTP enabled on the host (OpenSSH enables it by default).
+  needs SFTP enabled on the host (OpenSSH enables it by default); Remote tabs need tmux 3.0 or newer.
 
 ## Feedback
 
