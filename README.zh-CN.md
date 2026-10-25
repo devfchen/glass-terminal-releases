@@ -9,6 +9,8 @@
 
 > 源码目前未公开，后续会开源。这个仓库只用来发布安装包和收集反馈。
 
+![粘贴截图，直接进到服务器上的 Claude Code](images/paste.png)
+
 ## 下载
 
 到 [Releases](https://github.com/devfchen/glass-terminal-releases/releases) 下载最新版：
@@ -25,12 +27,16 @@
 
 ## 为什么用 Glass
 
+![把文件拖到 ssh 标签的命令行或文件面板](images/drop-files.png)
+
+![几台主机上的 Claude Code、Codex 同时开在标签里](images/tabs.png)
+
 - **快**：Rust 编写，基于 Zed 编辑器的 GPUI 框架用 GPU 绘制，终端内核是 alacritty_terminal；大量输出、
   快速滚动都很流畅，安装包只有两三 MB。
 - **粘贴很顺**：截图、浏览器里复制的图片、Finder / 资源管理器里复制的文件，在本机标签里直接用，在 ssh
   标签里自动传到远端再填入远端路径；前台是 Claude Code / Codex 时显示为 `[Image #1]` 附件。远端什么都
   不用装，走系统自带的 OpenSSH。
-- **拖文件上传**：把文件拖进 ssh 标签，直接传到终端当前所在的目录，保留原文件名，重名自动改名不覆盖。
+- **拖文件上传**：把文件拖进 ssh 标签，直接传到终端当前所在的目录，保留原文件名，并把远端路径填进命令行；重名自动改名不覆盖。
 - **文件面板**（⌘B / Alt+B）：侧栏浏览远端文件，拖进去上传、右键下载，跟着终端的 `cd` 走，有进度、能取消。
 - **为 AI 助手调好的键盘**：支持 kitty 键盘协议，Claude Code / Codex 里 Shift+Enter 换行、Enter 提交；
   ⌘ / Ctrl 点击打开链接，包括程序发出的跨行链接。

@@ -12,6 +12,8 @@ Runs on macOS, Windows and Linux. The UI is in Chinese by default; switch it to 
 > The source code is not public yet and will be open-sourced later. This repository only hosts the
 > installers and collects feedback.
 
+![Paste a screenshot and it lands in Claude Code on the server](images/paste.png)
+
 ## Download
 
 Get the latest version from [Releases](https://github.com/devfchen/glass-terminal-releases/releases):
@@ -28,6 +30,10 @@ Get the latest version from [Releases](https://github.com/devfchen/glass-termina
 
 ## Why Glass
 
+![Drop files onto the command line or the file panel of an ssh tab](images/drop-files.png)
+
+![Tabs running Claude Code and Codex on several hosts](images/tabs.png)
+
 - **Fast**: written in Rust, drawn on the GPU with GPUI (the framework of the Zed editor), with
   alacritty_terminal as the terminal core. Heavy output and fast scrolling stay smooth, and the
   installers are only two or three MB.
@@ -36,7 +42,8 @@ Get the latest version from [Releases](https://github.com/devfchen/glass-termina
   in. When Claude Code / Codex is in front they show up as `[Image #1]` attachments. Nothing to
   install on the host: it goes through the system's own OpenSSH.
 - **Drop files to upload**: drag files into an ssh tab and they go to the terminal's current
-  directory, keeping their names; a name already taken gets a new one instead of being overwritten.
+  directory, keeping their names, and their remote paths are typed in at the prompt; a name already
+  taken gets a new one instead of being overwritten.
 - **File panel** (⌘B / Alt+B): browse the remote files in a sidebar, drop files in to upload,
   right-click to download. It follows the terminal's `cd`, shows progress and can be cancelled.
 - **Keyboard tuned for AI agents**: kitty keyboard protocol, so Shift+Enter makes a new line and
