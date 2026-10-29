@@ -48,8 +48,8 @@ Get the latest version from [Releases](https://github.com/devfchen/glass-termina
   taken gets a new one instead of being overwritten.
 - **Sessions that survive**: tabs opened from the Remote menu (the cloud icon) run in tmux on the
   host, so sleep, a dropped Wi-Fi or quitting Glass doesn't stop them; they reconnect on their own
-  with the screen and history intact. The Remote menu lists every window on every host, one click
-  brings it back. Quit and reopen Glass: windows, tabs, folders and scrollback come back.
+  with the screen and history intact. The Remote menu lists every window on every host with its
+  folder and what it is doing (Claude Code's conversation title); one click brings it back. Quit and reopen Glass: windows, tabs, folders and scrollback come back.
 - **File panel** (⌘B / Alt+B): browse the remote files in a sidebar, drop files in to upload,
   right-click to download. It follows the terminal's `cd`, shows progress and can be cancelled.
 - **Keyboard tuned for AI agents**: kitty keyboard protocol, so Shift+Enter makes a new line and
